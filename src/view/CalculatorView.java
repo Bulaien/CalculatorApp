@@ -26,8 +26,11 @@ public class CalculatorView
         this.calculatorFrame.setMinimumSize(new Dimension(400, 200));
         this.calculatorFrame.setPreferredSize(new Dimension(400, 200));
 
-        // bad practice:
+        // bad practice. Laut Oracle sollte immer ein Layout Manager verwendet werden:
+        // Absolute Layout:
         this.calculatorFrame.setLayout(null);
+
+        // zentriert das Frame:
         this.calculatorFrame.setLocationRelativeTo(null);
 
         this.calculatorFrame.getContentPane().setBackground(new Color(104, 139, 173));
