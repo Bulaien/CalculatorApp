@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b678f343-566c-401a-8035-4a83032e0758" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/Addition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Division.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/IArithmeticStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Multiplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Substraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/CalculatorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/CalculatorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CalculatorView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

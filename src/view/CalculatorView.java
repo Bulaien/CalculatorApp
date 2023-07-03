@@ -2,6 +2,7 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class CalculatorView
 {
@@ -124,6 +125,30 @@ public class CalculatorView
 
 
 
+    }
+
+    // öffentliche Methoden, die Controller benutzen kann um mit der View zu interagieren.
+    public void setButtonClickListener(ActionListener buttonClickListener)
+    {
+        for(int i = 0; i < this.numberButtons.length; i++)
+        {
+            this.numberButtons[i].addActionListener(buttonClickListener);
+        }
+
+        for(int i = 0; i < this.operatorButtons.length; i++)
+        {
+            this.operatorButtons[i].addActionListener(buttonClickListener);
+        }
+    }
+
+    public void writeToDisplay(String content)
+    {
+        this.txt_display.setText(content);
+    }
+
+    public void clearDisplay()
+    {
+        this.txt_display.setText("");
     }
 }
 
