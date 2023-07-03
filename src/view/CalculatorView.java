@@ -12,6 +12,7 @@ public class CalculatorView
     private JTextField txt_display;
 
     private JButton[] numberButtons;
+    private JButton[] operatorButtons;
     private JPanel pnl_buttons;
     private JPanel pnl_display;
     private JPanel pnl_function_buttons;
@@ -52,6 +53,12 @@ public class CalculatorView
         // this.calculatorFrame.setLayout(new BoxLayout(this.calculatorFrame, BoxLayout.Y_AXIS));
 
         this.calculatorFrame.add(this.pnl_buttons);
+
+        // TODO: das gefällt mir nicht, dass hier buttons hinzugefügt werden und die bounds eingestellt werden:
+        this.operatorButtons[6].setBounds(50, 430, 145, 50);
+        this.operatorButtons[7].setBounds(205, 430, 145, 50);
+        this.calculatorFrame.add(this.operatorButtons[6]);
+        this.calculatorFrame.add(this.operatorButtons[7]);
         this.calculatorFrame.add(this.txt_display);
 
         this.calculatorFrame.setVisible(true);
@@ -64,13 +71,6 @@ public class CalculatorView
         this.txt_display.setFont(new Font("Arial", Font.BOLD, 30));
         this.txt_display.setHorizontalAlignment(JTextField.RIGHT);
         this.txt_display.setEditable(false);
-        // this.txt_display.setText("Hallo Welt!");
-
-//        this.pnl_display = new JPanel();
-//        this.pnl_display.setBackground(Color.ORANGE);
-
-//        this.pnl_display.add(txt_display);
-//        this.pnl_display.setVisible(true);
     }
 
     private void createButtonPanel()
@@ -84,26 +84,46 @@ public class CalculatorView
             this.numberButtons[i].setFocusable(false);
         }
 
+        Operators[] operators = Operators.values();
+        this.operatorButtons = new JButton[(operators.length)];
+
+        for(int i = 0; i < this.operatorButtons.length; i++)
+        {
+            operatorButtons[i] = new JButton();
+            operatorButtons[i].setFont(this.defaultFont);
+            operatorButtons[i].setFocusable(false);
+            operatorButtons[i].setText(operators[i].getBtnText());
+        }
+
         // TODO: Das refaktorisieren und am besten in der Schleife zuordnen.
         this.pnl_buttons = new JPanel();
         this.pnl_buttons.add(numberButtons[7]);
         this.pnl_buttons.add(numberButtons[8]);
         this.pnl_buttons.add(numberButtons[9]);
+        this.pnl_buttons.add(operatorButtons[3]);
 
         this.pnl_buttons.add(numberButtons[4]);
         this.pnl_buttons.add(numberButtons[5]);
         this.pnl_buttons.add(numberButtons[6]);
+        this.pnl_buttons.add(operatorButtons[2]);
 
         this.pnl_buttons.add(numberButtons[1]);
         this.pnl_buttons.add(numberButtons[2]);
         this.pnl_buttons.add(numberButtons[3]);
+        this.pnl_buttons.add(operatorButtons[1]);
 
+        this.pnl_buttons.add(operatorButtons[4]);
         this.pnl_buttons.add(numberButtons[0]);
+        this.pnl_buttons.add(operatorButtons[5]);
+        this.pnl_buttons.add(operatorButtons[0]);
 
         // HIer wird das Panel erstellt:
         this.pnl_buttons.setBounds(50, 100, 300, 300);
         this.pnl_buttons.setBackground(new Color(87, 118, 148));
         this.pnl_buttons.setLayout(new GridLayout(4, 4, 10, 10));
+
+
+
     }
 }
 
