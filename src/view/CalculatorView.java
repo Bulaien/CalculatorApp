@@ -141,6 +141,66 @@ public class CalculatorView
         }
     }
 
+    public Font getDefaultFont() {
+        return defaultFont;
+    }
+
+    public JFrame getCalculatorFrame() {
+        return calculatorFrame;
+    }
+
+    public void setCalculatorFrame(JFrame calculatorFrame) {
+        this.calculatorFrame = calculatorFrame;
+    }
+
+    public JTextField getTxt_display() {
+        return txt_display;
+    }
+
+    public void setTxt_display(JTextField txt_display) {
+        this.txt_display = txt_display;
+    }
+
+    public JButton[] getNumberButtons() {
+        return numberButtons;
+    }
+
+    public void setNumberButtons(JButton[] numberButtons) {
+        this.numberButtons = numberButtons;
+    }
+
+    public JButton[] getOperatorButtons() {
+        return operatorButtons;
+    }
+
+    public void setOperatorButtons(JButton[] operatorButtons) {
+        this.operatorButtons = operatorButtons;
+    }
+
+    public JPanel getPnl_buttons() {
+        return pnl_buttons;
+    }
+
+    public void setPnl_buttons(JPanel pnl_buttons) {
+        this.pnl_buttons = pnl_buttons;
+    }
+
+    public JPanel getPnl_display() {
+        return pnl_display;
+    }
+
+    public void setPnl_display(JPanel pnl_display) {
+        this.pnl_display = pnl_display;
+    }
+
+    public JPanel getPnl_function_buttons() {
+        return pnl_function_buttons;
+    }
+
+    public void setPnl_function_buttons(JPanel pnl_function_buttons) {
+        this.pnl_function_buttons = pnl_function_buttons;
+    }
+
     public void writeToDisplay(String content)
     {
         this.txt_display.setText(content);

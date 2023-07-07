@@ -28,12 +28,16 @@ public class CalculatorController
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            if(e.getActionCommand() == "Del")
+
+            for (int i = 0; i < 10; i++) {
+
+            }
+            if(e.getActionCommand() == "Clr")
             {
                 calculatorView.clearDisplay();
                 return;
             }
-              calculatorView.writeToDisplay("Hallo Welt");
+//              calculatorView.writeToDisplay("Hallo Welt");
         }
     }
 }
